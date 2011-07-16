@@ -5352,6 +5352,9 @@ div.lrec,
 .dirListSuperSpons,
 /* zdnet.com.au */
 #mpu,
-#promo-power-centre
+#promo-power-centre,
+/*ekonomi.milliyet.com*/
+.katTop /* #milliyet_ekonomi_728x90 için */
+/* *.Milliyet.com için*/
+.adnet,.adnet120
 { display: none !important }
-Yukarı Aşağı
