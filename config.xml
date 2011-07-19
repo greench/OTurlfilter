@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets">
+	<name>Smart Ads Blocker</name>
+	<description>Block advertise with fast and smart way</description>
+	<author href="http://my.opera.com/inBusteR/" email="mustafa.oguz@live.com">Mustafa OĞUZ</author>
+	<icon src="assets/icon.png"/>
+</widget>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="includes/source.js"></script>
+<script>
+	opera.extension.onconnect = function(event) {
+		var pref = widget.preferences;
+		var active = pref.getItem("activeProfile");
+
+		// Default values
+		if (pref.getItem(active) === '')
+			pref.setItem(active, "ads");
+
+		var pattern = pref.getItem(active);
+		event.source.postMessage(pattern);
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

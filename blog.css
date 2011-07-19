@@ -1,0 +1,74 @@
+body {
+	background:#D1D1D1 url(file://localhost/C:/Documents%20and%20Settings/BusteR/Desktop/Minimal_Bird_by_theDudz.jpg) fixed bottom left no-repeat !important;
+	margin:0; padding:0;
+}
+
+* {
+	font-family:"Arial"  !important;
+}
+
+#wrap0 {
+	background:none  !important;
+	padding:0  !important;
+}
+
+#wrap1 {
+	background-color:rgba(255,255,255,.2);
+	border-left:10px solid rgba(255,255,255,.2);
+	border-right:10px solid rgba(255,255,255,.2);
+	box-shadow:rgba(0,0,0,.1) 0 0 20px;
+}
+
+#wrap2 {
+	border-left:15px solid rgba(33,66,104,.4)  !important;
+	border-right:15px solid rgba(33,66,104,.4)  !important;
+	
+}
+
+#top2,
+.postdate,
+.postinfo,
+.tags,
+#footer2,
+#sitelang,
+.shout p {
+	display:none  !important;
+}
+
+#header {
+	margin-bottom:0px  !important;
+	border-radius:0  !important;
+	border-bottom:3px solid rgba(144,157,173,1)  !important;
+}
+
+.shout b {
+	display:block  !important;
+}
+
+
+#mainwrap, #main {
+	width:98%  !important;
+}
+
+#menu {
+	background:rgba(255,255,255,.4)  !important;
+	padding:20px 0;
+	border-bottom:1px dotted #ccc  !important;
+}
+
+#menu a {
+	background:none  !important;
+	border:none  !important;
+	opacity:.5;
+	-o-transition:.5s -o-transform, .2s opacity;
+}
+
+#menu a:hover {
+	-o-transform:scale(1.2);
+	opacity:1;
+}
+
+#menu a:active {
+	-o-transform:scale(3);
+	opacity:0;
+}

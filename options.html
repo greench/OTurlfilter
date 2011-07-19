@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<title>Ads Pattern Test</title>
+	<style>
+		body {
+			font-family:sans-serif;
+			font-size:12px;
+			background:#f1f1f1;
+			color:#214268;
+		}
+
+		#prefs-form,
+		#help{
+			border:none;
+			border-top:1px solid #dadada;
+		}
+
+		#prefs-form textarea {
+			width:99%;
+			height:200px;
+			padding:5px;
+			border:1px solid #bbb;
+			border-bottom:2px solid #aaa;
+		}
+
+		button {
+			background: #fff;
+			padding:3px 15px;
+			border:1px solid #bbb;
+			border-bottom:1px solid #aaa;
+			font-weight:bold;
+			margin:5px 0;
+		}
+
+		.right {
+			float:right;
+		}
+	</style>
+	<body>
+		<fieldset id="prefs-form">
+			<legend><b> ^Pattern </b></legend>
+			<p>Use this form to block advertise content</p>
+			<label><textarea name="pattern"></textarea> </label>
+			<label><button onclick="savePrefs()">SAVE</button></label>
+			<label class="right" style="margin:5px 0;">
+			<b>Profile: </b>
+			<input type="text" list="profile" id="profileID" name="profile" value="#01" placeholder="Select profile" onchange="loadPrefs()" required>
+			<button onclick="loadPrefs()">LOAD</button>
+			<datalist id="profile">
+			<option label="Profile 01" value="#01">
+			<option label="Profile 02" value="#02">
+			<option label="Profile 03" value="#03">
+			<option label="Profile 04" value="#04">
+			<option label="Updated" value="#UP">
+			</datalist>
+			</label>
+		</fieldset>
+
+		<fieldset id="help">
+			<legend><b> ?Help </b></legend>
+			<ol>
+				<li>Testing</li>
+			</ol>
+		</fieldset>
+	</body>
+
+	<script>
+		var form = document.getElementById("prefs-form");
+		var profile = document.getElementById("profileID");
+		var patternForm = form.querySelector("textarea");
+		var pref = widget.preferences;
+
+		profile.value = pref.getItem("activeProfile");
+
+		function loadPrefs() {
+			if (typeof pref.getItem(profile.value) !== "undefined") {
+				patternForm.innerHTML = pref.getItem(profile.value);
+			}
+		}
+
+
+		function savePrefs () {
+			pref.setItem(profile.value,patternForm.innerText);
+			pref.setItem("activeProfile",profile.value);
+		}
+
+		loadPrefs();
+	</script>
+</html>

@@ -1,0 +1,6 @@
+config.xml
+index.html
+options.html
+blog.css
+assets/*
+includes/*
